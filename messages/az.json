@@ -5,6 +5,10 @@
      "paragraph1": "Təkrarlanan setup-lar ilə vaxt itirməyin! Hazır şablonlar Next.js, next-intl, Zustand və digər alətləri birləşdirərək, işə dərhal başlamağınıza kömək edir. Layihələrinizi qurmağa fokuslanın, onların setuplarını yox!",
      "paragraph2": "Bir şablon seçin, `Use Template` düyməsinə basın və layihənizi bir neçə saniyə ərzində başlayın. İş axınınızı sadələşdirin və sürətinizi maksimuma çatdırın.",
      "star": "GitHub-da ulduzla"
-     }  
+    },
+    "Top": {
+      "overview": "Ümumi baxış",
+      "templates": "Şablonlar"
+    }
  }
    

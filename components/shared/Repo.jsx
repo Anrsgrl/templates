@@ -41,7 +41,7 @@ const Repo = ({ url, onlyStar, star }) => {
 
   return (
     <div className="flex flex-col gap-1 py-6 border-b border-zinc-300/25">
-      <div className="flex flex-col sm:flex-row items-center justify-between w-full gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between w-full gap-4">
         <div className="flex items-center gap-4">
           <a
             target="_blank"
