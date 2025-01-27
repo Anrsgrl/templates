@@ -8,8 +8,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "mac-red": "#FF3B30",
+        "mac-yellow": "#FFCC00",
+        "mac-green": "#4CD964",
       },
     },
   },
