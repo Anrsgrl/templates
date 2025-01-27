@@ -6,15 +6,26 @@ import { BsStarFill } from "react-icons/bs";
 import CountUp from "react-countup";
 const Repo = ({ url, onlyStar, star }) => {
   const [data, setData] = useState([]);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     if (url) {
-      fetch(url)
+      fetch(url, {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_KEY}`,
+        },
+      })
         .then((res) => res.json())
         .then((data) => setData(data))
-        .catch((err) => console.error("Failed to fetch GitHub stars:", err));
+        .catch((err) => {
+          setError(true);
+          console.error("Error fetching data:", err);
+        });
     }
-  }, []);
+  }, [url]);
+
+  if (error) return "";
 
   if (onlyStar) {
     return (
