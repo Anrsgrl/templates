@@ -40,7 +40,7 @@ const Repo = ({ url, onlyStar }) => {
   }
 
   return (
-    <div className="flex flex-col gap-1 py-4">
+    <div className="flex flex-col gap-1 py-6 border-b border-zinc-300/25">
       <div className="flex items-center justify-between w-full">
         <div className="flex items-center gap-4">
           <a
@@ -68,9 +68,9 @@ const Repo = ({ url, onlyStar }) => {
               copyToClipboard(`git clone ${data?.html_url}`, "Kopyalandı")
             }
             type="button"
-            className="py-2 px-4 bg-zinc-900 border border-zinc-800 rounded-md flex items-center gap-1 text-emerald-500 text-semibold hover:text-emerald-500/80 animated-all"
+            className="py-2 px-4 bg-zinc-900 border border-zinc-800 rounded-md flex items-center gap-1 text-emerald-500 text-semibold hover:text-emerald-500/80 animated-all text-sm"
           >
-            <GoRepoTemplate size={20} />
+            <GoRepoTemplate size={16} />
             <span>Use this template</span>
           </button>
           <a
@@ -79,14 +79,14 @@ const Repo = ({ url, onlyStar }) => {
             href={data?.html_url}
             className="py-2 px-4 bg-zinc-900 border border-zinc-800 rounded-md flex items-center gap-1 text-yellow-500 text-semibold hover:text-yellow-500/80 animated-all"
           >
-            <BsStarFill size={20} />
-            <span>
+            <BsStarFill size={16} />
+            <span className="text-sm">
               <CountUp start={0} end={data?.stargazers_count} duration={2.5} />
             </span>
           </a>
         </div>
       </div>
-      <p className="opacity-80">{data?.description}</p>
+      <p className="opacity-60 pt-1">{data?.description}</p>
     </div>
   );
 };

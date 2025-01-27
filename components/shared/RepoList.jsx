@@ -8,11 +8,15 @@ const RepoList = () => {
   const data = REPO_LIST;
   return (
     <div className="w-full h-full py-4">
-      <Input />
+      <div className="px-6">
+        <Input />
+      </div>
       <div className="h-full overflow-y-auto">
-        {data?.map((repo, index) => (
-          <Repo url={repo} key={index} />
-        ))}
+        <div className="px-6">
+          {data?.map((repo, index) => (
+            <Repo url={repo} key={index} />
+          ))}
+        </div>
       </div>
     </div>
   );
