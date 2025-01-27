@@ -4,7 +4,7 @@ import { copyToClipboard } from "@/utils/helpers";
 import { SiGithub } from "react-icons/si";
 import { BsStarFill } from "react-icons/bs";
 import CountUp from "react-countup";
-const Repo = ({ url, onlyStar }) => {
+const Repo = ({ url, onlyStar, star }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const Repo = ({ url, onlyStar }) => {
         className="flex items-center gap-2 px-4 py-2 rounded-md font-medium text-white hover:bg-gray-700 hover:bg-gray-600 transition duration-300"
       >
         <SiGithub size={20} />
-        <span>Star on github</span>
+        <span>{star}</span>
 
         <span className="flex items-center gap-1 bg-gray-800 text-yellow-400 px-2 py-1 rounded-full text-sm">
           <BsStarFill size={12} />
@@ -41,7 +41,7 @@ const Repo = ({ url, onlyStar }) => {
 
   return (
     <div className="flex flex-col gap-1 py-6 border-b border-zinc-300/25">
-      <div className="flex items-center justify-between w-full">
+      <div className="flex flex-col sm:flex-row items-center justify-between w-full gap-4">
         <div className="flex items-center gap-4">
           <a
             target="_blank"
@@ -71,7 +71,7 @@ const Repo = ({ url, onlyStar }) => {
             className="py-2 px-4 bg-zinc-900 border border-zinc-800 rounded-md flex items-center gap-1 text-emerald-500 text-semibold hover:text-emerald-500/80 animated-all text-sm"
           >
             <GoRepoTemplate size={16} />
-            <span>Use this template</span>
+            <span className="hidden sm:block">Use this template</span>
           </button>
           <a
             target="_blank"
@@ -80,7 +80,7 @@ const Repo = ({ url, onlyStar }) => {
             className="py-2 px-4 bg-zinc-900 border border-zinc-800 rounded-md flex items-center gap-1 text-yellow-500 text-semibold hover:text-yellow-500/80 animated-all"
           >
             <BsStarFill size={16} />
-            <span className="text-sm">
+            <span className="text-sm hidden sm:block">
               <CountUp start={0} end={data?.stargazers_count} duration={2.5} />
             </span>
           </a>
