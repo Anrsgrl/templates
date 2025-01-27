@@ -24,11 +24,11 @@ const Repo = ({ url, onlyStar, star }) => {
         rel="noopener noreferrer"
         className="flex items-center gap-2 px-4 py-2 rounded-md font-medium text-white hover:bg-gray-700 hover:bg-gray-600 transition duration-300"
       >
-        <SiGithub size={20} />
+        <SiGithub className="w-5 h-5" />
         <span>{star}</span>
 
         <span className="flex items-center gap-1 bg-gray-800 text-yellow-400 px-2 py-1 rounded-full text-sm">
-          <BsStarFill size={12} />
+          <BsStarFill className="w-3 h-3" />
           {data?.stargazers_count === null ? (
             "?"
           ) : (
@@ -42,7 +42,7 @@ const Repo = ({ url, onlyStar, star }) => {
   return (
     <div className="flex flex-col gap-1 py-6 border-b border-zinc-300/25">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between w-full gap-4">
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -70,7 +70,7 @@ const Repo = ({ url, onlyStar, star }) => {
             type="button"
             className="py-2 px-4 bg-zinc-900 border border-zinc-800 rounded-md flex items-center gap-1 text-emerald-500 text-semibold hover:text-emerald-500/80 animated-all text-sm"
           >
-            <GoRepoTemplate size={16} />
+            <GoRepoTemplate className="w-3 h-3 sm:w-4 sm:h-4" />
             <span className="hidden sm:block">Use this template</span>
           </button>
           <a
@@ -79,14 +79,14 @@ const Repo = ({ url, onlyStar, star }) => {
             href={data?.html_url}
             className="py-2 px-4 bg-zinc-900 border border-zinc-800 rounded-md flex items-center gap-1 text-yellow-500 text-semibold hover:text-yellow-500/80 animated-all"
           >
-            <BsStarFill size={16} />
+            <BsStarFill className="w-3 h-3 sm:w-4 sm:h-4" />
             <span className="text-sm hidden sm:block">
               <CountUp start={0} end={data?.stargazers_count} duration={2.5} />
             </span>
           </a>
         </div>
       </div>
-      <p className="opacity-60 pt-1">{data?.description}</p>
+      <p className="opacity-60 pt-1 text-sm">{data?.description}</p>
     </div>
   );
 };

@@ -6,7 +6,7 @@ const Overview = () => {
   const t = useTranslations("Overview");
   return (
     <div className="py-10 px-6 text-white flex flex-col items-center h-full overflow-auto font-mono">
-      <div className="max-w-4xl w-full text-center flex flex-col justify-center items-center h-full">
+      <div className="max-w-4xl w-full text-center flex flex-col sm:justify-center items-center h-full">
         <h1 className="text-4xl font-extrabold mb-6 text-emerald-400 animate-pulse">
           {t("heading")} 🚀
         </h1>
