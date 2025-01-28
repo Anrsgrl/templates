@@ -4,17 +4,19 @@ import { GoBook } from "react-icons/go";
 import { TbTemplate } from "react-icons/tb";
 import { useTranslations } from "next-intl";
 import LanguageChanger from "./LanguageChanger";
-const GithubTop = ({ active, setActive }) => {
+import { useRouter } from "next/navigation";
+const GithubTop = ({ active }) => {
   const t = useTranslations("Top");
+  const navigate = useRouter();
   const MENU = [
     {
       label: t("overview"),
-      value: "Overview",
+      value: "overview",
       icon: <GoBook size={16} />,
     },
     {
       label: t("templates"),
-      value: "Templates",
+      value: "templates",
       icon: <TbTemplate size={16} />,
     },
   ];
@@ -39,9 +41,13 @@ const GithubTop = ({ active, setActive }) => {
           <button
             key={index}
             type="button"
-            onClick={() => setActive(item.value)}
+            onClick={() => navigate.push(`/?tab=${item.value}`)}
             className={`border-b-2 border-transparent ${
-              active === item.value ? "!border-green-400" : ""
+              active === item.value
+                ? "!border-green-400"
+                : !active && index === 0
+                ? "!border-green-400"
+                : ""
             } group`}
           >
             <div className="flex items-center gap-2 px-2 py-1 mb-1 rounded-md group-hover:bg-zinc-700">

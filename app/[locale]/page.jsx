@@ -2,10 +2,11 @@
 import Overview from "@/components/layout/Overview";
 import GithubTop from "@/components/shared/GithubTop";
 import RepoList from "@/components/shared/RepoList";
-import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState("Overview");
+  const searchParams = useSearchParams();
+  const tab = searchParams.get("tab");
   return (
     <div className="p-4 flex justify-center items-center container mx-auto h-[95lvh] overflow-hidden">
       <div className="w-full h-[90lvh] bg-gradient-to-br bg-gradient-to-br from-zinc-950 via-zinc-950 to-zinc-900 rounded-md relative border-2 border-zinc-300">
@@ -15,9 +16,9 @@ export default function Home() {
           <div className="rounded-full w-4 h-4 bg-mac-green"></div>
         </div>
         <div className="py-4 pb-0 h-3/4">
-          <GithubTop active={activeTab} setActive={setActiveTab} />
+          <GithubTop active={tab} />
           <div className="h-full">
-            {activeTab === "Templates" ? <RepoList /> : <Overview />}
+            {tab === "templates" ? <RepoList /> : <Overview />}
           </div>
         </div>
       </div>
