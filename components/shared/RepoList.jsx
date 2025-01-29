@@ -1,8 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import Input from "../common/Input";
-import Repo from "./Repo";
+import Input from "@/components/common/Input";
 import { REPO_LIST } from "@/utils/constants";
+import dynamic from "next/dynamic";
+import SkeletonLoading from "@/components/common/SkeletonLoading";
+const Repo = dynamic(() => import("@/components/shared/Repo"), {
+  ssr: false,
+  loading: () => <SkeletonLoading />,
+});
 
 const RepoList = () => {
   const [filterBy, setFilterBy] = useState("");
