@@ -7,6 +7,7 @@ import {
   SiI18Next,
   SiNextdotjs,
   SiRedux,
+  SiSanity,
 } from "react-icons/si";
 import { BsStarFill } from "react-icons/bs";
 import CountUp from "react-countup";
@@ -38,6 +39,7 @@ const Repo = ({ url, tech, onlyStar, star }) => {
     firebase: <SiFirebase size={20} />,
     redux: <SiRedux size={20} />,
     zustand: <GiBearHead size={20} />,
+    sanity: <SiSanity scale={20} />,
   };
 
   if (error) return "";
@@ -117,7 +119,7 @@ const Repo = ({ url, tech, onlyStar, star }) => {
           tech?.includes(e) ? (
             <div
               key={e}
-              className="p-1 rounded-md bg-sky-700/25 hover:bg-sky-700/90 hover:text-white text-sky-600 animated-all cursor-pointer"
+              className="w-7 h-7 flex items-center justify-center p-1 rounded-md bg-sky-700/25 hover:bg-sky-700/90 hover:text-white text-sky-600 animated-all cursor-pointer"
             >
               {techIcons[e]}
             </div>

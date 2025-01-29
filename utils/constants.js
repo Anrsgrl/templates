@@ -23,4 +23,12 @@ export const REPO_LIST = [
     url: "https://api.github.com/repos/Anrsgrl/next-firebase-ts",
     tech: "nextjs, tailwindcss, firebase, typescript",
   },
+  {
+    url: "https://api.github.com/repos/Anrsgrl/next-sanity-js",
+    tech: "nextjs, tailwindcss, sanity, javascript",
+  },
+  {
+    url: "https://api.github.com/repos/Anrsgrl/next-sanity-ts",
+    tech: "nextjs, tailwindcss, sanity, typescript",
+  },
 ];
