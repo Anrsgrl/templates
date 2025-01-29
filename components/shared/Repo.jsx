@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { GoRepoTemplate } from "react-icons/go";
 import { copyToClipboard } from "@/utils/helpers";
-import { SiGithub } from "react-icons/si";
+import {
+  SiFirebase,
+  SiGithub,
+  SiI18Next,
+  SiNextdotjs,
+  SiRedux,
+} from "react-icons/si";
 import { BsStarFill } from "react-icons/bs";
 import CountUp from "react-countup";
-const Repo = ({ url, onlyStar, star }) => {
+import { GiBearHead } from "react-icons/gi";
+const Repo = ({ url, tech, onlyStar, star }) => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(false);
 
@@ -24,6 +31,14 @@ const Repo = ({ url, onlyStar, star }) => {
         });
     }
   }, [url]);
+
+  const techIcons = {
+    next: <SiNextdotjs size={20} />,
+    i18n: <SiI18Next size={20} />,
+    firebase: <SiFirebase size={20} />,
+    redux: <SiRedux size={20} />,
+    zustand: <GiBearHead size={20} />,
+  };
 
   if (error) return "";
 
@@ -96,6 +111,18 @@ const Repo = ({ url, onlyStar, star }) => {
             </span>
           </a>
         </div>
+      </div>
+      <div className="flex items-center gap-1">
+        {Object.keys(techIcons).map((e) =>
+          tech?.includes(e) ? (
+            <div
+              key={e}
+              className="p-1 rounded-md bg-sky-700/25 hover:bg-sky-700/90 hover:text-white text-sky-600 animated-all cursor-pointer"
+            >
+              {techIcons[e]}
+            </div>
+          ) : null
+        )}
       </div>
       <p className="opacity-60 pt-1 text-sm">{data?.description}</p>
     </div>

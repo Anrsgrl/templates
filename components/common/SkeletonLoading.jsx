@@ -16,6 +16,10 @@ const SkeletonLoading = () => {
           <div className="py-2 px-4 bg-zinc-800 border border-zinc-700 rounded-md flex items-center gap-1 w-16 h-8"></div>
         </div>
       </div>
+      <div className="flex items-center gap-1">
+        <div className="p-1 bg-zinc-700 border border-zinc-700 rounded-md flex items-center gap-1 w-7 h-7"></div>
+        <div className="p-1 bg-zinc-700 border border-zinc-700 rounded-md flex items-center gap-1 w-7 h-7"></div>
+      </div>
       <div className="h-4 w-3/4 bg-zinc-700 rounded-md mt-2"></div>
     </div>
   );

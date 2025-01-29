@@ -1,19 +1,19 @@
 export const REPO_LIST = [
   {
     url: "https://api.github.com/repos/Anrsgrl/next-intl-js",
-    tech: "nextjs, tailwindcss, next-intl, javascript",
+    tech: "nextjs, tailwindcss, i18n, javascript",
   },
   {
     url: "https://api.github.com/repos/Anrsgrl/next-intl-ts",
-    tech: "nextjs, tailwindcss, next-intl, typescript",
+    tech: "nextjs, tailwindcss, i18n, typescript",
   },
   {
     url: "https://api.github.com/repos/Anrsgrl/next-intl-zustand-js",
-    tech: "nextjs, tailwindcss, next-intl, zustand, javascript",
+    tech: "nextjs, tailwindcss, i18n, zustand, javascript",
   },
   {
     url: "https://api.github.com/repos/Anrsgrl/next-intl-zustand-ts",
-    tech: "nextjs, tailwindcss, next-intl, zustand, typescript",
+    tech: "nextjs, tailwindcss, i18n, zustand, typescript",
   },
   {
     url: "https://api.github.com/repos/Anrsgrl/next-firebase-js",

@@ -26,7 +26,7 @@ const RepoList = () => {
       <div className="h-full overflow-y-auto">
         <div className="px-6">
           {data?.map((repo, index) => (
-            <Repo url={repo.url} key={index} />
+            <Repo url={repo.url} tech={repo.tech} key={index} />
           ))}
         </div>
       </div>
