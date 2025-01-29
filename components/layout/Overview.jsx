@@ -1,12 +1,14 @@
 import React from "react";
-import Repo from "../shared/Repo";
+import Repo from "@/components/shared/Repo";
 import { useTranslations } from "next-intl";
-
+import logo from "@/assets/images/logo.png";
+import Image from "next/image";
 const Overview = () => {
   const t = useTranslations("Overview");
   return (
     <div className="py-10 px-6 text-white flex flex-col items-center h-full overflow-auto font-mono">
       <div className="max-w-4xl w-full text-center flex flex-col sm:justify-center items-center h-full">
+        <Image src={logo.src} alt="logo" width={125} height={125} />
         <h1 className="text-4xl font-extrabold mb-6 text-emerald-400 animate-pulse">
           {t("heading")} 🚀
         </h1>
