@@ -3,7 +3,6 @@ import { SiGithub } from "react-icons/si";
 import { GoBook } from "react-icons/go";
 import { TbTemplate } from "react-icons/tb";
 import { useTranslations } from "next-intl";
-import LanguageChanger from "./LanguageChanger";
 import { useRouter } from "next/navigation";
 const GithubTop = ({ active }) => {
   const t = useTranslations("Top");
@@ -34,7 +33,6 @@ const GithubTop = ({ active }) => {
             Anrsgrl
           </a>
         </div>
-        <LanguageChanger />
       </div>
       <div className="pt-5 flex gap-4 text-base">
         {MENU.map((item, index) => (

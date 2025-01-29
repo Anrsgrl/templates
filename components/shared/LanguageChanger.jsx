@@ -1,40 +1,34 @@
 import { Link } from "@/i18n/routing";
 import { useLocale } from "next-intl";
-import React, { useState } from "react";
-import { GrLanguage } from "react-icons/gr";
+import React from "react";
 
 const LanguageChanger = () => {
-  const [show, setShow] = useState(false);
   const locale = useLocale();
+  const languages = [
+    { code: "en", label: "EN" },
+    { code: "az", label: "AZ" },
+  ];
 
   return (
-    <div className="flex items-center gap-2 text-sm">
-      {show && (
-        <div>
-          <Link
-            href="/"
-            locale="en"
-            replace
-            type="button"
-            className={`${locale === "en" ? "text-emerald-500" : ""}`}
-          >
-            EN
-          </Link>
-          <span className="mx-2 opacity-50">/</span>
-          <Link
-            href="/"
-            locale="az"
-            replace
-            type="button"
-            className={`${locale === "az" ? "text-green-500" : ""}`}
-          >
-            AZ
-          </Link>
-        </div>
-      )}
-      <button type="button" onClick={() => setShow(!show)}>
-        <GrLanguage className="w-6 sm:w-8 h-6 sm:h-8" />
-      </button>
+    <div className="relative flex items-center bg-zinc-800 rounded-full p-1">
+      <div
+        className={`absolute left-1 top-1 w-[calc(50%-4px)] h-[calc(100%-8px)] bg-emerald-500 rounded-full transition-transform duration-300 ease-in-out ${
+          locale === "az" ? "translate-x-full" : "translate-x-0"
+        }`}
+      ></div>
+      {languages.map(({ code, label }) => (
+        <Link
+          key={code}
+          href="/"
+          locale={code}
+          replace
+          className={`relative z-10 flex-1 text-center py-1 px-2 text-xs font-semibold transition-colors duration-300 ${
+            locale === code ? "text-white" : "text-zinc-400"
+          }`}
+        >
+          {label}
+        </Link>
+      ))}
     </div>
   );
 };

@@ -25,9 +25,15 @@ const RepoList = () => {
       </div>
       <div className="h-full overflow-y-auto">
         <div className="px-6">
-          {data?.map((repo, index) => (
-            <Repo url={repo.url} tech={repo.tech} key={index} />
-          ))}
+          {data?.length > 0 ? (
+            data?.map((repo, index) => (
+              <Repo url={repo.url} tech={repo.tech} key={index} />
+            ))
+          ) : (
+            <div className="mt-2 text-sm text-zinc-400">
+              Cannot find anything
+            </div>
+          )}
         </div>
       </div>
     </div>
