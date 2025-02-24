@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
 
-## Getting Started
+# Templates
 
-First, run the development server:
+<img src="assets/images/logo.svg" alt="Logo" width="200"/>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Stop wasting time on repetitive setups! Our pre-built templates bring together tools like Next.js, next-intl, Zustand and more to help you hit the ground running. Focus on building your projects, not setting them up!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<a href="https://resume.anarr.dev">templates.anarr.dev</a>
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+</div>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Available Templates
 
-## Learn More
+| [Next.js + Next-intl ↗](https://github.com/Anrsgrl/next-intl-js) | [Next.js + Next-intl + Zustand ↗](https://github.com/Anrsgrl/next-intl-zustand-js) | [Next.js + Firebase ↗](https://github.com/Anrsgrl/next-firebase-js) | [Next.js + Sanity ↗](https://github.com/Anrsgrl/next-sanity-js)
+|--|--|--|--|
+|<img src="https://img.icons8.com/color/512/javascript.png" width="24px" /> <img src="https://img.icons8.com/color/512/typescript.png" width="24px" />   | <img src="https://img.icons8.com/color/512/javascript.png" width="24px" /> <img src="https://img.icons8.com/color/512/typescript.png" width="24px" />   |<img src="https://img.icons8.com/color/512/javascript.png" width="24px" /> <img src="https://img.icons8.com/color/512/typescript.png" width="24px" />   |<img src="https://img.icons8.com/color/512/javascript.png" width="24px" /> <img src="https://img.icons8.com/color/512/typescript.png" width="24px" />   |
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Quick Start: Pre-configured templates that help you launch projects in seconds.
+- TypeScript & JavaScript Support: Choose between JS and TS versions depending on your project needs.
+- Modern Stack: Powered by Next.js, TailwindCSS, and other cutting-edge technologies.
+- Fully Customizable: Easily extend and customize templates to fit your project’s requirements.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## TODO
 
-## Deploy on Vercel
+- Add more templates for different techs.
+- Optimize current templates
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you'd like to contribute to the project, please check out the [Contributing Guide](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries, please contact me at [mail@anarr.dev].
