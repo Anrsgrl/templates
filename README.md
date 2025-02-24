@@ -4,7 +4,7 @@
 
 <img src="assets/images/logo.svg" alt="Logo" width="200"/>
 
-Stop wasting time on repetitive setups! Our pre-built templates bring together tools like Next.js, next-intl, Zustand and more to help you hit the ground running. Focus on building your projects, not setting them up!
+Stop wasting time on repetitive setups! These pre-built templates bring together tools like Next.js, next-intl, Zustand and more to help you hit the ground running. Focus on building your projects, not setting them up!
 
 <a href="https://resume.anarr.dev">templates.anarr.dev</a>
 
