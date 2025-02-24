@@ -1,6 +1,6 @@
 <div align="center">
 
-# Templates
+# Templates (coming soon)
 
 <img src="assets/images/logo.svg" alt="Logo" width="200"/>
 
